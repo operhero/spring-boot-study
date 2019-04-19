@@ -1,1 +1,3 @@
+com\operhero\pojo\User.class
 com\operhero\App.class
+com\operhero\web\LoginController.class

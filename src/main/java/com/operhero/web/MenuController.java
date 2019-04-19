@@ -4,15 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HelloController {
+public class MenuController {
 
-    @RequestMapping("/hello")
-    public String hello(){
-        return "hello";
+    @RequestMapping("/menu")
+    public String menu(){
+        return "menu";
     }
 
     @RequestMapping("/")
     public String index() {
-        return "redirect:/hello";
+        return "redirect:/menu";
     }
 }
