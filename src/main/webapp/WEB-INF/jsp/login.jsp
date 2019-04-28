@@ -9,8 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
 
-    <title>添加用户</title>
-	<h1>添加用户</h1>
+    <title>登录</title>
+	<h1>登录</h1>
 
   </head>
 
@@ -21,6 +21,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<input type="submit" value="提交" />
 		 &nbsp; &nbsp; &nbsp;
         <input type="reset" value="重置"  />
+         &nbsp; &nbsp; &nbsp;
+          <input onclick="out()" type="button" value="注册" >
+          <script ...>
+          function out(){
+          var url = "/login/toregist";
+          window.location.href= url;
+          }
+          </script>
 	</form>
   </body>
+
+
 </html>

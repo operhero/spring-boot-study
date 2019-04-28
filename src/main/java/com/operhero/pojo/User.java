@@ -1,14 +1,21 @@
 package com.operhero.pojo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "t_user")
 public class User {
+
     /** 编号 */
+    @Id
+    @GeneratedValue
     private Long id;
-    /** 姓名 */
+
+    @Column(nullable = false, unique = true)
     private String name;
     /** 密码*/
+    @Column(nullable = false)
     private String password;
-    /** 年龄 */
-    private Integer age;
 
     public User(){
     }
@@ -57,28 +64,9 @@ public class User {
 
     /**
      * 设置password
-     * @param String password
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-
-
-
-    /**
-     * 获取age
-     * @return  age
-     */
-    public Integer getAge() {
-        return age;
-    }
-
-    /**
-     * 设置age
-     * @param Integer age
-     */
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     /**
@@ -86,6 +74,6 @@ public class User {
      */
     @Override
     public String toString() {
-        return "User [id=" + id + ", name=" + name + ", password=" + password + ", age=" + age + "]";
+        return "User [name=" + name + ", password=" + password + "]";
     }
 }
